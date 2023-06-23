@@ -1,0 +1,30 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Éléments</th>
+        </tr>
+    </thead>
+    <tbody>
+     {% for tab in tableau %} 
+        <tr>
+        
+        
+            <td>  
+                  
+           
+
+            {{ tab |join(', ') }}
+            
+                   
+
+            </td>
+                        
+
+            
+        </tr>
+         {% endfor %}
+    </tbody>
+</table>
+le nombre d'éelement {{nbrval}} <br>
+Le maximum est {{max}} <br>
+Le minimum est {{min}}
