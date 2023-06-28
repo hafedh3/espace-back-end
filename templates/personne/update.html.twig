@@ -1,0 +1,9 @@
+{% block content %}
+    <h1>Mise à jour de la personne</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <button type="submit" class="btn btn-primary">Mettre à jour</button>
+    {{ form_end(form) }}
+{% endblock %}

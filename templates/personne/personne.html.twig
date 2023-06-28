@@ -1,0 +1,29 @@
+
+{% block content %}
+    <h1>Personne</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Âge</th>
+                <th>Date de naissance</th>
+                <th>Téléphone</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>{{ personne.id }}</td>
+                    <td>{{ personne.firstname }}</td>
+                    <td>{{ personne.lastname }}</td>
+                    <td>{{ personne.age }}</td>
+                    <td>{{ personne.datedenaissance ? personne.datedenaissance|date('d/m/Y') : '' }}</td>
+                    <td>{{ personne.telephone }}</td>
+                </tr>
+          
+        </tbody>
+    </table>
+{% endblock %}
