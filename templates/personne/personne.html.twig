@@ -1,29 +1,36 @@
+{% extends 'base.html.twig' %}
 
-{% block content %}
-    <h1>Personne</h1>
+{% block body %}
+    <div class="container">
+        <h1>Personne</h1>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Prénom</th>
-                <th>Nom</th>
-                <th>Âge</th>
-                <th>Date de naissance</th>
-                <th>Téléphone</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-                <tr>
-                    <td>{{ personne.id }}</td>
-                    <td>{{ personne.firstname }}</td>
-                    <td>{{ personne.lastname }}</td>
-                    <td>{{ personne.age }}</td>
-                    <td>{{ personne.datedenaissance ? personne.datedenaissance|date('d/m/Y') : '' }}</td>
-                    <td>{{ personne.telephone }}</td>
-                </tr>
-          
-        </tbody>
-    </table>
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">Id:</div>
+                    <div class="col-md-9">{{ personne.id }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Prénom:</div>
+                    <div class="col-md-9">{{ personne.firstname }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Nom:</div>
+                    <div class="col-md-9">{{ personne.lastname }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Âge:</div>
+                    <div class="col-md-9">{{ personne.age }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Date de naissance:</div>
+                    <div class="col-md-9">{{ personne.datedenaissance ? personne.datedenaissance|date('d/m/Y') : '' }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Téléphone:</div>
+                    <div class="col-md-9">{{ personne.telephone }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

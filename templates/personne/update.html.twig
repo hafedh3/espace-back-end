@@ -1,9 +1,36 @@
-{% block content %}
-    <h1>Mise à jour de la personne</h1>
+{% extends 'base.html.twig' %}
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
+{% block body %}
+    <div class="container">
+        <h1>Mise à jour de la personne</h1>
 
-        <button type="submit" class="btn btn-primary">Mettre à jour</button>
-    {{ form_end(form) }}
+        {{ form_start(form, {'attr': {'class': 'form'}}) }}
+            <div class="mb-3">
+                {{ form_label(form.firstname, null, {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.firstname, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(form.lastname, null, {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.lastname, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(form.age, null, {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.age, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(form.datedenaissance, null, {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.datedenaissance, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(form.telephone, null, {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.telephone, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Mettre à jour</button>
+        {{ form_end(form) }}
+    </div>
 {% endblock %}
